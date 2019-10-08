@@ -1,0 +1,74 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.medication_order_list.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Prescrição no atendimento"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.medication_order_list.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": {
+    "_archetype_node_id": "openEHR-EHR-EVALUATION.medication_statement_uk.v1",
+    "_type": "EVALUATION",
+    "name": {
+      "value": "Linha de Medicação"
+    },
+    "archetype_details": {
+      "archetype_id": {
+        "value": "openEHR-EHR-EVALUATION.medication_statement_uk.v1"
+      },
+      "rm_version": "1.0.1"
+    },
+    "language": {
+      "terminology_id": {
+        "value": "ISO_639-1"
+      },
+      "code_string": "en"
+    },
+    "encoding": {
+      "terminology_id": {
+        "value": "IANA_character-sets"
+      },
+      "code_string": "UTF-8"
+    },
+    "subject": {
+      "_type": "PARTY_SELF"
+    },
+    "data": {
+      "_archetype_node_id": "at0001",
+      "_type": "ITEM_TREE",
+      "name": {
+        "value": "*Tree(en)"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-CLUSTER.free_text.v0",
+          "_type": "CLUSTER",
+          "name": {
+            "value": "Medicamentos prescritos no atendimento (não estruturado)"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-CLUSTER.free_text.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "items": {
+            "_archetype_node_id": "at0001",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Descrição da prescrição"
+            },
+            "value": {
+              "_type": "DV_TEXT",
+              "value": "1) Captopril 25mg comprimidos, 1cp, oral, 12/12hs, por 30 dias; 2)Glibenclamida 5mg comprimidos, 1cp, oral, 12/12hs, por 30 dias; 3) Sinvastatina 20 mg comprimidos, 1cp, oral, 1x dia, por 30 dias."
+            }
+          }
+        }
+      ]
+    }
+  }
+}

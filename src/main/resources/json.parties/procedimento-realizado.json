@@ -1,0 +1,120 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.problem_list.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Procedimento(s) realizado(s) ou solicitado(s)"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.problem_list.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": [
+    {
+      "_archetype_node_id": "openEHR-EHR-ACTION.procedure-ms_br.v2",
+      "_type": "ACTION",
+      "name": {
+        "value": "Procedimento"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-ACTION.procedure-ms_br.v2"
+        },
+        "rm_version": "1.0.1"
+      },
+      "language": {
+        "terminology_id": {
+          "value": "ISO_639-1"
+        },
+        "code_string": "en"
+      },
+      "encoding": {
+        "terminology_id": {
+          "value": "IANA_character-sets"
+        },
+        "code_string": "UTF-8"
+      },
+      "subject": {
+        "_type": "PARTY_SELF"
+      },
+      "time": {
+        "value": "2018-01-01T00:00:00Z"
+      },
+      "description": {
+        "_archetype_node_id": "at0001",
+        "_type": "ITEM_TREE",
+        "name": {
+          "value": "Tree"
+        },
+        "items": [
+          {
+            "_archetype_node_id": "at0002.1",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Procedimento SUS"
+            },
+            "value": {
+              "_type": "DV_CODED_TEXT",
+              "value": "CONSULTA MEDICA EM ATENÇAO BASICA",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "SIGTAP_201712.v1.0.0"
+                },
+                "code_string": "03.01.01.006-4"
+              }
+            }
+          },
+          {
+            "_archetype_node_id": "at0060",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Data da realização"
+            },
+            "value": {
+              "_type": "DV_DATE_TIME",
+              "value": "2018-01-01T00:00:00Z"
+            }
+          },
+          {
+            "_archetype_node_id": "at0.2",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Status do procedimento"
+            },
+            "value": {
+              "_type": "DV_CODED_TEXT",
+              "value": "Concluído",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "local"
+                },
+                "code_string": "at0.3"
+              }
+            }
+          }
+        ]
+      },
+      "ism_transition": {
+        "current_state": {
+          "value": "initial",
+          "defining_code": {
+            "terminology_id": {
+              "value": "openehr"
+            },
+            "code_string": "524"
+          }
+        },
+        "careflow_step": {
+          "value": "Plano de procedimento",
+          "defining_code": {
+            "terminology_id": {
+              "value": "local"
+            },
+            "code_string": "at0034"
+          }
+        }
+      }
+    }
+  ]
+}

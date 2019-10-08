@@ -1,0 +1,231 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Caracterização do atendimento"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.adhoc.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": {
+    "_archetype_node_id": "openEHR-EHR-ADMIN_ENTRY.admission-ms_br.v2",
+    "_type": "ADMIN_ENTRY",
+    "name": {
+      "value": "Admissão do paciente"
+    },
+    "archetype_details": {
+      "archetype_id": {
+        "value": "openEHR-EHR-ADMIN_ENTRY.admission-ms_br.v2"
+      },
+      "template_id": {
+        "value": "RegistroAtendimentoClinico.v4.0"
+      },
+      "rm_version": "1.0.1"
+    },
+    "language": {
+      "terminology_id": {
+        "value": "ISO_639-1"
+      },
+      "code_string": "en"
+    },
+    "encoding": {
+      "terminology_id": {
+        "value": "IANA_character-sets"
+      },
+      "code_string": "UTF-8"
+    },
+    "subject": {
+      "_type": "PARTY_SELF"
+    },
+    "data": {
+      "_archetype_node_id": "at0001",
+      "_type": "ITEM_TREE",
+      "name": {
+        "value": "Tree"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "at0.135",
+          "_type": "ELEMENT",
+          "name": {
+            "value": "Modalidade assistencial"
+          },
+          "value": {
+            "_type": "DV_CODED_TEXT",
+            "value": "Atenção básica",
+            "defining_code": {
+              "terminology_id": {
+                "value": "local"
+              },
+              "code_string": "at0.136"
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "at0.132",
+          "_type": "ELEMENT",
+          "name": {
+            "value": "Tipo de atendimento"
+          },
+          "value": {
+            "_type": "DV_CODED_TEXT",
+            "value": "Consulta agendada programada/ cuidado continuado",
+            "defining_code": {
+              "terminology_id": {
+                "value": "local"
+              },
+              "code_string": "at0.143"
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "at0.176",
+          "_type": "ELEMENT",
+          "name": {
+            "value": "Procedência"
+          },
+          "value": {
+            "_type": "DV_CODED_TEXT",
+            "value": "Demanda espontânea",
+            "defining_code": {
+              "terminology_id": {
+                "value": "local"
+              },
+              "code_string": "at0.179"
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "at0073",
+          "_type": "CLUSTER",
+          "name": {
+            "value": "Localização atribuída ao paciente"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0074.1",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Local de atendimento"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "No próprio estabelecimento",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0.177"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0104",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Instituição"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0.158",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Estabelecimento de saúde"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "UBS Bom Retiro"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0.159",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Identificação da equipe de saúde"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "1234"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "_archetype_node_id": "at0121",
+          "_type": "CLUSTER",
+          "name": {
+            "value": "Profissionais do atendimento"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0100",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Nome do profissional"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "MARLI DOS SANTOS NEVES DAS NEVES"
+              }
+            },
+            {
+              "_archetype_node_id": "at0.165",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "CNS do profissional"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "203011369760008"
+              }
+            },
+            {
+              "_archetype_node_id": "at0.166",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Ocupação do profissional"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Médico de família e comunidade",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "CBO_2002.v1.0.0"
+                  },
+                  "code_string": "225130"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0.167",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "É o responsável pelo atendimento?"
+              },
+              "value": {
+                "_type": "DV_BOOLEAN",
+                "value": "true"
+              }
+            }
+          ]
+        },
+        {
+          "_archetype_node_id": "at0071",
+          "_type": "ELEMENT",
+          "name": {
+            "value": "Data/hora da admissão"
+          },
+          "value": {
+            "_type": "DV_DATE_TIME",
+            "value": "2018-01-01T00:00:00Z"
+          }
+        }
+      ]
+    }
+  }
+}

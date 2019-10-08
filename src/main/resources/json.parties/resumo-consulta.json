@@ -1,0 +1,87 @@
+{
+  "_archetype_node_id": "openEHR-EHR-COMPOSITION.encounter.v1",
+  "name": {
+    "value": "Registro de Atendimento Clínico"
+  },
+  "uid": {
+    "_type": "OBJECT_VERSION_ID",
+    "value": "dcf97204-df2c-4bf3-a1aa-1ca49381c0f6::example.ethercis.com::1"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-COMPOSITION.encounter.v1"
+    },
+    "template_id": {
+      "value": "RegistroAtendimentoClinico.v4.0"
+    },
+    "rm_version": "1.0.1"
+  },
+  "language": {
+    "terminology_id": {
+      "value": "ISO_639-1"
+    },
+    "code_string": "en"
+  },
+  "territory": {
+    "terminology_id": {
+      "value": "ISO_3166-1"
+    },
+    "code_string": "GB"
+  },
+  "category": {
+    "value": "event",
+    "defining_code": {
+      "terminology_id": {
+        "value": "openehr"
+      },
+      "code_string": "433"
+    }
+  },
+  "composer": {
+    "_type": "PARTY_IDENTIFIED",
+    "external_ref": {
+      "id": {
+        "_type": "GENERIC_ID",
+        "value": "1234-5678",
+        "scheme": "ETHERCIS-TEST"
+      },
+      "namespace": "DEMOGRAPHIC",
+      "type": "PARTY"
+    },
+    "name": "Composer",
+    "identifiers": {
+      "issuer": "ETHERCIS",
+      "assigner": "dummy",
+      "id": "1234-5678",
+      "type": "dummy"
+    }
+  },
+  "context": {
+    "start_time": {
+      "value": "2019-08-30T14:16:17.658Z"
+    },
+    "location": "TEST LAB",
+    "setting": {
+      "value": "Other Care",
+      "defining_code": {
+        "terminology_id": {
+          "value": "openehr"
+        },
+        "code_string": "238"
+      }
+    },
+    "health_care_facility": {
+      "external_ref": {
+        "id": {
+          "_type": "GENERIC_ID",
+          "value": "123456-123",
+          "scheme": "ETHERCIS-SCHEME"
+        },
+        "namespace": "DEMOGRAPHIC",
+        "type": "PARTY"
+      },
+      "name": "FACILITY"
+    }
+  },
+  "content": []
+}

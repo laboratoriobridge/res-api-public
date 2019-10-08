@@ -1,0 +1,488 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Observações"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.adhoc.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": [
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Medições"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.body_weight.v1",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Peso corporal"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.body_weight.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0002",
+            "name": {
+              "value": "history"
+            },
+            "events": {
+              "_archetype_node_id": "at0003",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Qualquer evento"
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0001",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "Simple"
+                },
+                "items": {
+                  "_archetype_node_id": "at0004",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Peso"
+                  },
+                  "value": {
+                    "_type": "DV_QUANTITY",
+                    "accuracy": "0.0",
+                    "magnitude": "0.0",
+                    "units": "kg",
+                    "precision": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.height.v1",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Altura / comprimento"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.height.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "name": {
+              "value": "history"
+            },
+            "events": {
+              "_archetype_node_id": "at0002",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Qualquer evento"
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0003",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "Simple"
+                },
+                "items": {
+                  "_archetype_node_id": "at0004",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Altura"
+                  },
+                  "value": {
+                    "_type": "DV_QUANTITY",
+                    "accuracy": "0.0",
+                    "magnitude": "0.0",
+                    "units": "cm",
+                    "precision": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.head_circumference-ms_br.v0",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Perímetro cefálico"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.head_circumference-ms_br.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "name": {
+              "value": "Event Series"
+            },
+            "events": {
+              "_archetype_node_id": "at0010",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Qualquer ponto de tempo no evento."
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0003",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "Tree"
+                },
+                "items": {
+                  "_archetype_node_id": "at0004.1",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Perímetro cefálico"
+                  },
+                  "value": {
+                    "_type": "DV_QUANTITY",
+                    "accuracy": "0.0",
+                    "magnitude": "0.0",
+                    "units": "cm",
+                    "precision": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Informações adicionais"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.menstrual_cycle.v0",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Ciclo menstrual"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.menstrual_cycle.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "name": {
+              "value": "Event Series"
+            },
+            "events": {
+              "_archetype_node_id": "at0002",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Qualquer evento"
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0003",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "Tree"
+                },
+                "items": {
+                  "_archetype_node_id": "openEHR-EHR-ELEMENT.last_normal_menstrual_period.v1",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "DUM (Data da última menstruação)"
+                  },
+                  "value": {
+                    "_type": "DV_DATE_TIME",
+                    "value": "2018-01-01T00:00:00Z"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.gestation.v1",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Gestação"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.gestation.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "name": {
+              "value": "*Event Series(en)"
+            },
+            "events": {
+              "_archetype_node_id": "at0002",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Data da medida"
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0003",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "*Tree(en)"
+                },
+                "items": {
+                  "_archetype_node_id": "at0004",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Idade gestacional"
+                  },
+                  "value": {
+                    "_type": "DV_DURATION",
+                    "accuracy": "0.0",
+                    "value": "P0W"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-EVALUATION.obstetric_summary.v0",
+          "_type": "EVALUATION",
+          "name": {
+            "value": "Sumário obstétrico"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-EVALUATION.obstetric_summary.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Quantidade de gestas prévias"
+                },
+                "value": {
+                  "_type": "DV_COUNT",
+                  "accuracy": "0.0",
+                  "magnitude": "0"
+                }
+              },
+              {
+                "_archetype_node_id": "at0003",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Quantidade de partos"
+                },
+                "value": {
+                  "_type": "DV_COUNT",
+                  "accuracy": "0.0",
+                  "magnitude": "0"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-OBSERVATION.infant_feeding-ms_br.v0",
+          "_type": "OBSERVATION",
+          "name": {
+            "value": "Alimentação da criança menor de 2 anos"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-OBSERVATION.infant_feeding-ms_br.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "name": {
+              "value": "Event Series"
+            },
+            "events": {
+              "_archetype_node_id": "at0002",
+              "_type": "POINT_EVENT",
+              "name": {
+                "value": "Qualquer evento"
+              },
+              "time": {
+                "value": "2018-01-01T00:00:00Z"
+              },
+              "data": {
+                "_archetype_node_id": "at0003",
+                "_type": "ITEM_TREE",
+                "name": {
+                  "value": "Tree"
+                },
+                "items": {
+                  "_archetype_node_id": "at0030",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Tipo de aleitamento materno para crianças até 2 anos"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Exclusivo"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

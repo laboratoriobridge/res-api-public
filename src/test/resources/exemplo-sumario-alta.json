@@ -1,0 +1,2091 @@
+{
+  "_archetype_node_id": "openEHR-EHR-COMPOSITION.transfer_summary.v1",
+  "name": {
+    "value": "Sumário de alta"
+  },
+  "uid": {
+    "_type": "OBJECT_VERSION_ID",
+    "value": "bbdb04cc-37f4-4c53-91c9-2b5dc34be8a0::example.ethercis.com::1"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-COMPOSITION.transfer_summary.v1"
+    },
+    "template_id": {
+      "value": "SumariodeAlta.v4.0"
+    },
+    "rm_version": "1.0.1"
+  },
+  "language": {
+    "terminology_id": {
+      "value": "ISO_639-1"
+    },
+    "code_string": "en"
+  },
+  "territory": {
+    "terminology_id": {
+      "value": "ISO_3166-1"
+    },
+    "code_string": "GB"
+  },
+  "category": {
+    "value": "event",
+    "defining_code": {
+      "terminology_id": {
+        "value": "openehr"
+      },
+      "code_string": "433"
+    }
+  },
+  "composer": {
+    "_type": "PARTY_IDENTIFIED",
+    "external_ref": {
+      "id": {
+        "_type": "GENERIC_ID",
+        "value": "1234-5678",
+        "scheme": "ETHERCIS-TEST"
+      },
+      "namespace": "DEMOGRAPHIC",
+      "type": "PARTY"
+    },
+    "name": "Composer",
+    "identifiers": {
+      "issuer": "ETHERCIS",
+      "assigner": "dummy",
+      "id": "1234-5678",
+      "type": "dummy"
+    }
+  },
+  "context": {
+    "start_time": {
+      "value": "2019-08-28T17:47:11.307Z"
+    },
+    "location": "TEST LAB",
+    "setting": {
+      "value": "Other Care",
+      "defining_code": {
+        "terminology_id": {
+          "value": "openehr"
+        },
+        "code_string": "238"
+      }
+    },
+    "health_care_facility": {
+      "external_ref": {
+        "id": {
+          "_type": "GENERIC_ID",
+          "value": "123456-123",
+          "scheme": "ETHERCIS-SCHEME"
+        },
+        "namespace": "DEMOGRAPHIC",
+        "type": "PARTY"
+      },
+      "name": "FACILITY"
+    }
+  },
+  "content": [
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Caracterização do atendimento"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-ADMIN_ENTRY.admission-ms_br.v2",
+        "_type": "ADMIN_ENTRY",
+        "name": {
+          "value": "Admissão do paciente"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-ADMIN_ENTRY.admission-ms_br.v2"
+          },
+          "template_id": {
+            "value": "SumariodeAlta.v4.0"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "data": {
+          "_archetype_node_id": "at0001",
+          "_type": "ITEM_TREE",
+          "name": {
+            "value": "Tree"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0.131",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Caráter da internação"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Eletivo",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0.174"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0.135",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Modalidade assistencial"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Atenção hospitalar",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0.138"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0.176",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Procedência"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Demanda espontânea",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0.179"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0073",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Localização atribuída ao paciente"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0074.1",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Local de atendimento"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Domicílio",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at0.151"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0104",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Instituição"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "at0.158",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Estabelecimento de saúde"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "Hospital Universitário Walter Cantídio"
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0.159",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Identificação da equipe de saúde"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "_archetype_node_id": "at0071",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Data e hora da internação"
+              },
+              "value": {
+                "_type": "DV_DATE_TIME",
+                "value": "2017-01-01T00:00:00Z"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.problem_list.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Motivo da admissão, diagnósticos relevantes e patologias associadas desenvolvidas na internação"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.problem_list.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis-ms_br.v1",
+          "_type": "EVALUATION",
+          "name": {
+            "value": "Problema Diagnóstico"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis-ms_br.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "structure"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002.1",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Diagnóstico"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Infarto agudo transmural da parede inferior do miocárdio",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "CID-10_201812.v1.0.0"
+                    },
+                    "code_string": "I21.1"
+                  }
+                }
+              },
+              {
+                "_archetype_node_id": "openEHR-EHR-CLUSTER.problem_status-ms_br.v0",
+                "_type": "CLUSTER",
+                "name": {
+                  "value": "Estado do problema/diagnóstico"
+                },
+                "archetype_details": {
+                  "archetype_id": {
+                    "value": "openEHR-EHR-CLUSTER.problem_status-ms_br.v0"
+                  },
+                  "rm_version": "1.0.1"
+                },
+                "items": [
+                  {
+                    "_archetype_node_id": "at0083",
+                    "_type": "ELEMENT",
+                    "name": {
+                      "value": "Estado de resolução"
+                    },
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Resolvido",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0084"
+                      }
+                    }
+                  },
+                  {
+                    "_archetype_node_id": "at0063",
+                    "_type": "ELEMENT",
+                    "name": {
+                      "value": "Categoria do diagnóstico"
+                    },
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Diagnóstico principal",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0064"
+                      }
+                    }
+                  },
+                  {
+                    "_archetype_node_id": "at0.89",
+                    "_type": "ELEMENT",
+                    "name": {
+                      "value": "Indicador de presença na admissão"
+                    },
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Sim",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0.90"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-EVALUATION.problem_diagnosis-ms_br.v1",
+          "_type": "EVALUATION",
+          "name": {
+            "value": "Problema Diagnóstico #1"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-EVALUATION.problem_diagnosis-ms_br.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "structure"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002.1",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Problema"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Abuso de drogas",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at9999"
+                  }
+                }
+              },
+              {
+                "_archetype_node_id": "openEHR-EHR-CLUSTER.problem_status-ms_br.v0",
+                "_type": "CLUSTER",
+                "name": {
+                  "value": "Estado do problema/diagnóstico"
+                },
+                "archetype_details": {
+                  "archetype_id": {
+                    "value": "openEHR-EHR-CLUSTER.problem_status-ms_br.v0"
+                  },
+                  "rm_version": "1.0.1"
+                },
+                "items": [
+                  {
+                    "_archetype_node_id": "at0083",
+                    "_type": "ELEMENT",
+                    "name": {
+                      "value": "Estado de resolução"
+                    },
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Resolvido",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0084"
+                      }
+                    }
+                  },
+                  {
+                    "_archetype_node_id": "at0.89",
+                    "_type": "ELEMENT",
+                    "name": {
+                      "value": "Indicador de presença na admissão"
+                    },
+                    "value": {
+                      "_type": "DV_CODED_TEXT",
+                      "value": "Sim",
+                      "defining_code": {
+                        "terminology_id": {
+                          "value": "local"
+                        },
+                        "code_string": "at0.90"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Restrições funcionais e incapacidades em saúde"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-EVALUATION.precaution.v1",
+        "_type": "EVALUATION",
+        "name": {
+          "value": "Precaução"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-EVALUATION.precaution.v1"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "data": {
+          "_archetype_node_id": "at0001",
+          "_type": "ITEM_TREE",
+          "name": {
+            "value": "Árvore"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0002",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Restrição funcional ou incapacidade"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Fratura de membro inferior direito"
+              }
+            },
+            {
+              "_archetype_node_id": "at0014",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Status da restrição funcional ou incapacidade"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Ativo"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.problem_list.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Procedimento(s) realizado(s) ou solicitado(s)"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.problem_list.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-ACTION.procedure-ms_br.v2",
+          "_type": "ACTION",
+          "name": {
+            "value": "Procedimento"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-ACTION.procedure-ms_br.v2"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "protocol": {
+            "_archetype_node_id": "at0053",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree(en)"
+            },
+            "items": {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Procedimento cmd"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0001",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Financiamento"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Sistema Único de Saúde (SUS)",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at0002"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0015",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Quantidade"
+                  },
+                  "value": {
+                    "_type": "DV_COUNT",
+                    "accuracy": "0.0",
+                    "magnitude": "1"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0008",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Número de autorização"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "0"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0014",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Estabelecimento de saúde terceiro"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Hospital Universitário Walter Cantídio"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0010",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Profissional do procedimento"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "at0011",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CNS do profissional"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "162338254590005"
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0012",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CBO"
+                      },
+                      "value": {
+                        "_type": "DV_CODED_TEXT",
+                        "value": "Médico cirurgião cardiovascular",
+                        "defining_code": {
+                          "terminology_id": {
+                            "value": "CBO_2002.v1.0.0"
+                          },
+                          "code_string": "225210"
+                        }
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0013",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Equipe de saúde"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "time": {
+            "value": "1900-01-01T00:00:00Z"
+          },
+          "description": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002.1",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Procedimento SUS"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "TRATAMENTO DE INFARTO AGUDO DO MIOCÁRDIO",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "SIGTAP_201812.v1.0.0"
+                    },
+                    "code_string": "03.03.06.019-0"
+                  }
+                }
+              },
+              {
+                "_archetype_node_id": "at0048",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Resultado ou observações do procedimento"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Procedimento realizado com sucesso"
+                }
+              },
+              {
+                "_archetype_node_id": "at0060",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Data da realização"
+                },
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2017-01-01T00:00:00Z"
+                }
+              },
+              {
+                "_archetype_node_id": "at0.2",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Status do procedimento"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Concluído",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at0.3"
+                  }
+                }
+              }
+            ]
+          },
+          "ism_transition": {
+            "current_state": {
+              "value": "initial",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "openehr"
+                },
+                "code_string": "524"
+              }
+            },
+            "careflow_step": {
+              "value": "Plano de procedimento",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "local"
+                },
+                "code_string": "at0034"
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-ACTION.procedure-ms_br.v2",
+          "_type": "ACTION",
+          "name": {
+            "value": "Procedimento #1"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-ACTION.procedure-ms_br.v2"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "protocol": {
+            "_archetype_node_id": "at0053",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree(en)"
+            },
+            "items": {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Procedimento cmd"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0001",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Financiamento"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Sistema Único de Saúde (SUS)",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at0002"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0015",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Quantidade"
+                  },
+                  "value": {
+                    "_type": "DV_COUNT",
+                    "accuracy": "0.0",
+                    "magnitude": "1"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0008",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Número de autorização"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "0"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0014",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Estabelecimento de saúde terceiro"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Hospital Universitário Walter Cantídio"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0010",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Profissional do procedimento"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "at0011",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CNS do profissional"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "162338254590005"
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0012",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CBO"
+                      },
+                      "value": {
+                        "_type": "DV_CODED_TEXT",
+                        "value": "Médico cirurgião cardiovascular",
+                        "defining_code": {
+                          "terminology_id": {
+                            "value": "CBO_2002.v1.0.0"
+                          },
+                          "code_string": "225210"
+                        }
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0013",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Equipe de saúde"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "time": {
+            "value": "1900-01-01T00:00:00Z"
+          },
+          "description": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002.1",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Procedimento CBHPM"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Confecção de bandagem da artéria pulmonar",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at9999"
+                  }
+                }
+              },
+              {
+                "_archetype_node_id": "at0048",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Resultado ou observações do procedimento"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Realizado com sucesso"
+                }
+              },
+              {
+                "_archetype_node_id": "at0060",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Data da realização"
+                },
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2017-01-01T00:00:00Z"
+                }
+              },
+              {
+                "_archetype_node_id": "at0.2",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Status do procedimento"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Concluído",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at0.3"
+                  }
+                }
+              }
+            ]
+          },
+          "ism_transition": {
+            "current_state": {
+              "value": "initial",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "openehr"
+                },
+                "code_string": "524"
+              }
+            },
+            "careflow_step": {
+              "value": "Plano de procedimento",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "local"
+                },
+                "code_string": "at0034"
+              }
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-ACTION.procedure-ms_br.v2",
+          "_type": "ACTION",
+          "name": {
+            "value": "Procedimento #2"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-ACTION.procedure-ms_br.v2"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "protocol": {
+            "_archetype_node_id": "at0053",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree(en)"
+            },
+            "items": {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Procedimento cmd"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.procedimento_cmd-ms_br.v0"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0001",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Financiamento"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Sistema Único de Saúde (SUS)",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at0002"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0015",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Quantidade"
+                  },
+                  "value": {
+                    "_type": "DV_COUNT",
+                    "accuracy": "0.0",
+                    "magnitude": "1"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0008",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Número de autorização"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "0"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0014",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Estabelecimento de saúde terceiro"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Hospital Universitário Walter Cantídio"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0010",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Profissional do procedimento"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "at0011",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CNS do profissional"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "162338254590005"
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0012",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "CBO"
+                      },
+                      "value": {
+                        "_type": "DV_CODED_TEXT",
+                        "value": "Médico cirurgião cardiovascular",
+                        "defining_code": {
+                          "terminology_id": {
+                            "value": "CBO_2002.v1.0.0"
+                          },
+                          "code_string": "225210"
+                        }
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0013",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Equipe de saúde"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "0"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "time": {
+            "value": "1900-01-01T00:00:00Z"
+          },
+          "description": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0002.1",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Procedimento TUSS"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Perícia médica",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at9999"
+                  }
+                }
+              },
+              {
+                "_archetype_node_id": "at0048",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Resultado ou observações do procedimento"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Concuido com sucesso"
+                }
+              },
+              {
+                "_archetype_node_id": "at0060",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Data da realização"
+                },
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2017-01-01T00:00:00Z"
+                }
+              },
+              {
+                "_archetype_node_id": "at0.2",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Status do procedimento"
+                },
+                "value": {
+                  "_type": "DV_CODED_TEXT",
+                  "value": "Concluído",
+                  "defining_code": {
+                    "terminology_id": {
+                      "value": "local"
+                    },
+                    "code_string": "at0.3"
+                  }
+                }
+              }
+            ]
+          },
+          "ism_transition": {
+            "current_state": {
+              "value": "initial",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "openehr"
+                },
+                "code_string": "524"
+              }
+            },
+            "careflow_step": {
+              "value": "Plano de procedimento",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "local"
+                },
+                "code_string": "at0034"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Resumo da evolução clínica do indivíduo durante a internação"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-EVALUATION.container.v0",
+        "_type": "EVALUATION",
+        "name": {
+          "value": "Recipiente"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-EVALUATION.container.v0"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "data": {
+          "_archetype_node_id": "at0001",
+          "_type": "ITEM_TREE",
+          "name": {
+            "value": "Tree(en)"
+          },
+          "items": {
+            "_archetype_node_id": "openEHR-EHR-CLUSTER.free_text.v0",
+            "_type": "CLUSTER",
+            "name": {
+              "value": "Texto livre"
+            },
+            "archetype_details": {
+              "archetype_id": {
+                "value": "openEHR-EHR-CLUSTER.free_text.v0"
+              },
+              "rm_version": "1.0.1"
+            },
+            "items": {
+              "_archetype_node_id": "at0001",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Descrição da evolução clínica do indivíduo durante a internação"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Paciente internado com precordialgia à esquerda, durante o atendimento apresentou IAM inferior Killip II."
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adverse_list.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Alergias e/ou reações adversas na internação"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adverse_list.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-EVALUATION.adverse_reaction_risk-ms_br.v1",
+        "_type": "EVALUATION",
+        "name": {
+          "value": "Alergia e/ou reação adversa"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-EVALUATION.adverse_reaction_risk-ms_br.v1"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "data": {
+          "_archetype_node_id": "at0001",
+          "_type": "ITEM_TREE",
+          "name": {
+            "value": "Tree"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0002",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Agente/substância específica"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Lactose"
+              }
+            },
+            {
+              "_archetype_node_id": "at0101",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Criticidade"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Baixo",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0102"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0120",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Categoria do agente causador da alergia ou reação adversa"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Alimento"
+              }
+            },
+            {
+              "_archetype_node_id": "at0009",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Evento da reação"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0021.1",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Grau de certeza"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Suspeita",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at0095"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0011",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Manifestação"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Pele alergica e espinhas"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0012",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Evolução da alergia/reação adversa"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Inflamação na pele"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0027",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Data da instalação da reação adversa"
+                  },
+                  "value": {
+                    "_type": "DV_DATE_TIME",
+                    "value": "2017-01-01T00:00:00Z"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.medication_order_list.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Prescrição da alta"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.medication_order_list.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "openEHR-EHR-EVALUATION.medication_statement_uk.v1",
+          "_type": "EVALUATION",
+          "name": {
+            "value": "Linha de Medicação"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-EVALUATION.medication_statement_uk.v1"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "*Tree(en)"
+            },
+            "items": {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.medication_item.v1",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Lista de medicamentos da alta (estruturada)"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.medication_item.v1"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0001",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Medicamento"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Dipirona",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at9999"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0002",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Via de administração"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Comprimido",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "local"
+                      },
+                      "code_string": "at9999"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0021",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Frequência de uso do medicamento"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "2x por dia"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0045",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Dose estruturada"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "openEHR-EHR-CLUSTER.dosage.v1",
+                      "_type": "CLUSTER",
+                      "name": {
+                        "value": "Dose"
+                      },
+                      "archetype_details": {
+                        "archetype_id": {
+                          "value": "openEHR-EHR-CLUSTER.dosage.v1"
+                        },
+                        "rm_version": "1.0.1"
+                      },
+                      "items": [
+                        {
+                          "_archetype_node_id": "at0144",
+                          "_type": "ELEMENT",
+                          "name": {
+                            "value": "Quantidade da unidade de medida"
+                          },
+                          "value": {
+                            "_type": "DV_QUANTITY",
+                            "accuracy": "0.0",
+                            "magnitude": "0.0",
+                            "units": null,
+                            "precision": "0"
+                          }
+                        },
+                        {
+                          "_archetype_node_id": "at0145",
+                          "_type": "ELEMENT",
+                          "name": {
+                            "value": "Unidade de medida"
+                          },
+                          "value": {
+                            "_type": "DV_TEXT",
+                            "value": "mm3"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "_archetype_node_id": "at0037",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Duração de uso do medicamento"
+                      },
+                      "value": {
+                        "_type": "DV_DURATION",
+                        "accuracy": "0.0",
+                        "value": "P0D"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "_archetype_node_id": "at0046",
+                  "_type": "CLUSTER",
+                  "name": {
+                    "value": "Detalhes do processo medicação"
+                  },
+                  "items": [
+                    {
+                      "_archetype_node_id": "at0049",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Estado do medicamento"
+                      },
+                      "value": {
+                        "_type": "DV_CODED_TEXT",
+                        "value": "Ativa",
+                        "defining_code": {
+                          "terminology_id": {
+                            "value": "local"
+                          },
+                          "code_string": "at0050"
+                        }
+                      }
+                    },
+                    {
+                      "_archetype_node_id": "at0028",
+                      "_type": "ELEMENT",
+                      "name": {
+                        "value": "Orientação sobre o uso do medicamento"
+                      },
+                      "value": {
+                        "_type": "DV_TEXT",
+                        "value": "Uso oral, duas vezes ao dia"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "_archetype_node_id": "openEHR-EHR-EVALUATION.container.v0",
+          "_type": "EVALUATION",
+          "name": {
+            "value": "Recipiente"
+          },
+          "archetype_details": {
+            "archetype_id": {
+              "value": "openEHR-EHR-EVALUATION.container.v0"
+            },
+            "rm_version": "1.0.1"
+          },
+          "language": {
+            "terminology_id": {
+              "value": "ISO_639-1"
+            },
+            "code_string": "en"
+          },
+          "encoding": {
+            "terminology_id": {
+              "value": "IANA_character-sets"
+            },
+            "code_string": "UTF-8"
+          },
+          "subject": {
+            "_type": "PARTY_SELF"
+          },
+          "data": {
+            "_archetype_node_id": "at0001",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Tree(en)"
+            },
+            "items": {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.free_text.v0",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Medicamentos prescritos na alta (não estruturado)"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.free_text.v0"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": {
+                "_archetype_node_id": "at0001",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Descrição da prescrição"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "1) captopril 25 mg, oral, 1x/dia; 2) clopidogrel 75mg, oral,1x/dia, por 30 dias; 3) AAS 100mg, oral, 1x/dia pela manhã; 4) metoprolol 25 mg, oral, 1x/dia; 5) sinvastatina 20 mg, oral, 2x/dia."
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Plano de cuidados, instruções e recomendações (na alta)"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-INSTRUCTION.care_plan.v0",
+        "_type": "INSTRUCTION",
+        "name": {
+          "value": "Plano de Cuidado"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-INSTRUCTION.care_plan.v0"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "narrative": {
+          "value": "DEFAULT_NARRATIVE"
+        },
+        "activities": {
+          "_archetype_node_id": "at0001",
+          "name": {
+            "value": "Atividade"
+          },
+          "description": {
+            "_archetype_node_id": "at0004",
+            "_type": "ITEM_TREE",
+            "name": {
+              "value": "Árvore"
+            },
+            "items": {
+              "_archetype_node_id": "at0007",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Descrição do plano de cuidados, instruções e recomendações"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Evitar consumir alimentos salgados"
+              }
+            }
+          },
+          "timing": {
+            "value": "DEFAULT_TIMING",
+            "formalism": "DEFAULT_FORMALISM"
+          },
+          "action_archetype_id": "openEHR-EHR-ACTION\\.care_plan\\.v1"
+        }
+      }
+    },
+    {
+      "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+      "_type": "SECTION",
+      "name": {
+        "value": "Informações da alta"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-SECTION.adhoc.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "items": {
+        "_archetype_node_id": "openEHR-EHR-ADMIN_ENTRY.desfecho_alta-ms_br.v1",
+        "_type": "ADMIN_ENTRY",
+        "name": {
+          "value": "Desfecho / alta do contato assistencial"
+        },
+        "archetype_details": {
+          "archetype_id": {
+            "value": "openEHR-EHR-ADMIN_ENTRY.desfecho_alta-ms_br.v1"
+          },
+          "template_id": {
+            "value": "SumariodeAlta.v4.0"
+          },
+          "rm_version": "1.0.1"
+        },
+        "language": {
+          "terminology_id": {
+            "value": "ISO_639-1"
+          },
+          "code_string": "en"
+        },
+        "encoding": {
+          "terminology_id": {
+            "value": "IANA_character-sets"
+          },
+          "code_string": "UTF-8"
+        },
+        "subject": {
+          "_type": "PARTY_SELF"
+        },
+        "data": {
+          "_archetype_node_id": "at0001",
+          "_type": "ITEM_TREE",
+          "name": {
+            "value": "Tree"
+          },
+          "items": [
+            {
+              "_archetype_node_id": "at0050",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Motivo do desfecho"
+              },
+              "value": {
+                "_type": "DV_CODED_TEXT",
+                "value": "Alta clínica",
+                "defining_code": {
+                  "terminology_id": {
+                    "value": "local"
+                  },
+                  "code_string": "at0051"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0034",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Encaminhamento pós-alta"
+              },
+              "items": {
+                "_archetype_node_id": "at0037",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Descrição do serviço ou especialidade"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Retirada de pontos"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "at0018",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Estabelecimento de saúde"
+              },
+              "value": {
+                "_type": "DV_TEXT",
+                "value": "Hospital Universitário Walter Cantídio"
+              }
+            },
+            {
+              "_archetype_node_id": "at0015",
+              "_type": "ELEMENT",
+              "name": {
+                "value": "Data e hora da saída da internação"
+              },
+              "value": {
+                "_type": "DV_DATE_TIME",
+                "value": "2017-01-01T00:00:00Z"
+              }
+            },
+            {
+              "_archetype_node_id": "at0046",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Profissional responsável pela alta"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0048",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "CNS do profissional"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "162338254590005"
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0049",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Ocupação do profissional responsável pela alta"
+                  },
+                  "value": {
+                    "_type": "DV_CODED_TEXT",
+                    "value": "Médico cirurgião cardiovascular",
+                    "defining_code": {
+                      "terminology_id": {
+                        "value": "CBO_2002.v1.0.0"
+                      },
+                      "code_string": "225210"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "_archetype_node_id": "at0033",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Informações adicionais / complementares"
+              },
+              "items": {
+                "_archetype_node_id": "at0019",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Descrição das informações"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Sem informações adicionais"
+                }
+              }
+            },
+            {
+              "_archetype_node_id": "openEHR-EHR-CLUSTER.multimedia.v1",
+              "_type": "CLUSTER",
+              "name": {
+                "value": "Anexos com os resultados de exames"
+              },
+              "archetype_details": {
+                "archetype_id": {
+                  "value": "openEHR-EHR-CLUSTER.multimedia.v1"
+                },
+                "rm_version": "1.0.1"
+              },
+              "items": [
+                {
+                  "_archetype_node_id": "at0001",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Anexo"
+                  },
+                  "value": {
+                    "_type": "DV_MULTIMEDIA",
+                    "charset": {
+                      "terminology_id": {
+                        "value": "IANA_character-sets"
+                      },
+                      "code_string": "UTF-8"
+                    },
+                    "language": {
+                      "terminology_id": {
+                        "value": "ISO_639-1"
+                      },
+                      "code_string": "en"
+                    },
+                    "alternate_text": "alternative text",
+                    "uri": {
+                      "value": "www.iana.org"
+                    },
+                    "media_type": {
+                      "terminology_id": {
+                        "value": "IANA_media-types"
+                      },
+                      "code_string": "text/plain"
+                    },
+                    "compression_algorithm": {
+                      "terminology_id": {
+                        "value": "openehr_compression_algorithms"
+                      },
+                      "code_string": "other"
+                    },
+                    "integrity_check_algorithm": {
+                      "terminology_id": {
+                        "value": "openehr_integrity_check_algorithms"
+                      },
+                      "code_string": "SHA-1"
+                    }
+                  }
+                },
+                {
+                  "_archetype_node_id": "at0005",
+                  "_type": "ELEMENT",
+                  "name": {
+                    "value": "Descrição dos anexos"
+                  },
+                  "value": {
+                    "_type": "DV_TEXT",
+                    "value": "Sem anexos"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.adverse_list.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Alergias e/ou reações adversas no atendimento"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.adverse_list.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": [
+    {
+      "_archetype_node_id": "openEHR-EHR-EVALUATION.adverse_reaction_risk-ms_br.v1",
+      "_type": "EVALUATION",
+      "name": {
+        "value": "Risco de reação adversa"
+      },
+      "archetype_details": {
+        "archetype_id": {
+          "value": "openEHR-EHR-EVALUATION.adverse_reaction_risk-ms_br.v1"
+        },
+        "rm_version": "1.0.1"
+      },
+      "language": {
+        "terminology_id": {
+          "value": "ISO_639-1"
+        },
+        "code_string": "en"
+      },
+      "encoding": {
+        "terminology_id": {
+          "value": "IANA_character-sets"
+        },
+        "code_string": "UTF-8"
+      },
+      "subject": {
+        "_type": "PARTY_SELF"
+      },
+      "data": {
+        "_archetype_node_id": "at0001",
+        "_type": "ITEM_TREE",
+        "name": {
+          "value": "Tree"
+        },
+        "items": [
+          {
+            "_archetype_node_id": "at0002",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Agente/substância específica"
+            },
+            "value": {
+              "_type": "DV_TEXT",
+              "value": "Lactose"
+            }
+          },
+          {
+            "_archetype_node_id": "at0101",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Criticidade"
+            },
+            "value": {
+              "_type": "DV_CODED_TEXT",
+              "value": "Baixo",
+              "defining_code": {
+                "terminology_id": {
+                  "value": "local"
+                },
+                "code_string": "at0102"
+              }
+            }
+          },
+          {
+            "_archetype_node_id": "at0120",
+            "_type": "ELEMENT",
+            "name": {
+              "value": "Categoria do agente causador da alergia ou reação adversa"
+            },
+            "value": {
+              "_type": "DV_TEXT",
+              "value": "Alimento"
+            }
+          },
+          {
+            "_archetype_node_id": "at0009",
+            "_type": "CLUSTER",
+            "name": {
+              "value": "Evento da reação"
+            },
+            "items": [
+              {
+                "_archetype_node_id": "at0011",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Manifestação"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Cólicas, diarréia, mal estar."
+                }
+              },
+              {
+                "_archetype_node_id": "at0012",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Evolução da alergia/reação adversa"
+                },
+                "value": {
+                  "_type": "DV_TEXT",
+                  "value": "Pele vermelha e espinhas"
+                }
+              },
+              {
+                "_archetype_node_id": "at0027",
+                "_type": "ELEMENT",
+                "name": {
+                  "value": "Data da instalação da reação adversa"
+                },
+                "value": {
+                  "_type": "DV_DATE_TIME",
+                  "value": "2018-01-01T00:00:00Z"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

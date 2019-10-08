@@ -1,0 +1,70 @@
+{
+  "_archetype_node_id": "openEHR-EHR-SECTION.adhoc.v1",
+  "_type": "SECTION",
+  "name": {
+    "value": "Dados do desfecho"
+  },
+  "archetype_details": {
+    "archetype_id": {
+      "value": "openEHR-EHR-SECTION.adhoc.v1"
+    },
+    "rm_version": "1.0.1"
+  },
+  "items": {
+    "_archetype_node_id": "openEHR-EHR-ADMIN_ENTRY.desfecho_alta-ms_br.v1",
+    "_type": "ADMIN_ENTRY",
+    "name": {
+      "value": "Desfecho / alta do contato assistencial"
+    },
+    "archetype_details": {
+      "archetype_id": {
+        "value": "openEHR-EHR-ADMIN_ENTRY.desfecho_alta-ms_br.v1"
+      },
+      "template_id": {
+        "value": "RegistroAtendimentoClinico.v4.0"
+      },
+      "rm_version": "1.0.1"
+    },
+    "language": {
+      "terminology_id": {
+        "value": "ISO_639-1"
+      },
+      "code_string": "en"
+    },
+    "encoding": {
+      "terminology_id": {
+        "value": "IANA_character-sets"
+      },
+      "code_string": "UTF-8"
+    },
+    "subject": {
+      "_type": "PARTY_SELF"
+    },
+    "data": {
+      "_archetype_node_id": "at0001",
+      "_type": "ITEM_TREE",
+      "name": {
+        "value": "Tree"
+      },
+      "items": [
+        {
+          "_archetype_node_id": "at0050",
+          "_type": "ELEMENT",
+          "name": {
+            "value": "Motivo do desfecho"
+          },
+          "value": {
+            "_type": "DV_CODED_TEXT",
+            "value": "Encaminhamento",
+            "defining_code": {
+              "terminology_id": {
+                "value": "local"
+              },
+              "code_string": "at0053"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
